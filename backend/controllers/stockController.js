@@ -1,5 +1,6 @@
 const asyncHandler = require('express-async-handler');
 const Stock = require('../models/stockModel');
+const { calculateMetrics } = require('./scripts/stockMetricCall');
 
 // @desc Get all stocks
 // @route GET /api/stocks
@@ -78,7 +79,8 @@ exports.deleteStockBySymbol = asyncHandler(async (req, res) => {
 exports.getStockMetrics = asyncHandler(async (req, res) => {
   const { symbol } = req.params;
   // Fetch the stock data and calculate the 8 pillar metrics
-  // ...
+  const metrics = await calculateMetrics(symbol);
+  // Send the metrics back to the client
   res.json(metrics);
 });
 
