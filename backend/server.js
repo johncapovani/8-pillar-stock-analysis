@@ -1,12 +1,14 @@
-//Import the required packages
+// Import the required packages
 const express = require('express');
-const dotenv = require('dotenv').config()
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
-//Bring in errorHandler
-const { errorHandler } = require('./middleware/errorMiddleware')
+// Load environment variables from .env file
+dotenv.config();
+
+// Bring in errorHandler
+const { errorHandler } = require('./middleware/errorMiddleware');
 
 const app = express();
 
@@ -16,16 +18,20 @@ mongoose
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log(err));
 
-// Middlewares
-app.use(bodyParser.json());
+// Add middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-// Routes
+// Stock Analysis Routes
 const stockRoutes = require('./routes/stockRoutes');
 app.use('/api/stocks', stockRoutes);
 
-//Set the app to use our errorHandler
-app.use(errorHandler)
+// User routes
+app.use('/api/users', require('./routes/userRoutes'));
+
+// Set the app to use our errorHandler
+app.use(errorHandler);
 
 // Start server
 const PORT = process.env.PORT || 5000;

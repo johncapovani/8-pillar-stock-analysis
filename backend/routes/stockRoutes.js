@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
+
+// Add route protection
 const { protect } = require('../middleware/authMiddleware');
+
+// Bring in the stock controller functions
 const {
   getStocks,
   getStockBySymbol,
@@ -12,24 +16,24 @@ const {
 } = require('../controllers/stockController');
 
 // Get all stocks
-router.get('/stocks', getStocks);
+router.get('/', protect, getStocks);
 
 // Get a specific stock by symbol
-router.get('/stocks/:symbol', getStockBySymbol);
+router.get('/:symbol', protect, getStockBySymbol);
 
 // Add a new stock
-router.post('/stocks', protect, addStock);
+router.post('/', protect, addStock);
 
 // Update a stock by symbol
-router.put('/stocks/:symbol', protect, updateStockBySymbol);
+router.put('/:symbol', protect, updateStockBySymbol);
 
 // Delete a stock by symbol
-router.delete('/stocks/:symbol', protect, deleteStockBySymbol);
+router.delete('/:symbol', protect, deleteStockBySymbol);
 
 // Get 8 pillar metrics for a stock by symbol
-router.get('/stocks/:symbol/metrics', getStockMetrics);
+router.get('/:symbol/metrics', protect, getStockMetrics);
 
 // Calculate target price for a stock by symbol
-router.get('/stocks/:symbol/targetprice', getStockTargetPrice);
+router.get('/:symbol/target-price', protect, getStockTargetPrice);
 
 module.exports = router;
