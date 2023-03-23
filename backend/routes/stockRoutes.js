@@ -34,6 +34,7 @@ router.delete('/:symbol', protect, deleteStockBySymbol);
 router.get('/:symbol/metrics', protect, getStockMetrics);
 
 // Calculate target price for a stock by symbol
+//Not a priority 
 router.get('/:symbol/target-price', protect, getStockTargetPrice);
 
 module.exports = router;
