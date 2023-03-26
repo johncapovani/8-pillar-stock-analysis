@@ -1,0 +1,48 @@
+.watchlist-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.watchlist-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.watchlist-container form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.watchlist-container label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.watchlist-container input,
+.watchlist-container select {
+  font-size: 1rem;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.watchlist-container button {
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.watchlist-container button:hover {
+  background-color: #005A6E;
+}
