@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/authSlice'
 import '../components_css/Header.css'
+import '../pages/StockMetrics'
 
 function Header() {
   const navigate = useNavigate()
@@ -28,7 +29,7 @@ function Header() {
               <FaSignOutAlt /> Logout
             </button>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/dashboard'>8-Pillar Analysis</Link></li>
+            <li><Link to='/eightpillars'>8-Pillar Analysis</Link></li>
             <li><Link to='/'>Watchlist</Link></li>
             <li><Link to='/'>News Feed</Link></li>
           </li>
