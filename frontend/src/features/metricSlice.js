@@ -20,7 +20,7 @@ export const fetchMetrics = createAsyncThunk('metrics/fetchMetrics', async (symb
 });
 
 export const addStockAction = createAsyncThunk('metrics/addStock', async (stock, { getState }) => {
-  const token = getState().auth.token;
+  const token = getState().auth.user.token;
   const response = await addStock(stock, token);
   return response;
 });
@@ -28,20 +28,20 @@ export const addStockAction = createAsyncThunk('metrics/addStock', async (stock,
 export const updateStockAction = createAsyncThunk(
   'metrics/updateStock',
   async ({ symbol, stock }, { getState }) => {
-    const token = getState().auth.token;
+    const token = getState().auth.user.token;
     const response = await updateStock(symbol, stock, token);
     return response;
   }
 );
 
 export const deleteStockAction = createAsyncThunk('metrics/deleteStock', async (symbol, { getState }) => {
-  const token = getState().auth.token;
+  const token = getState().auth.user.token;
   const response = await deleteStock(symbol, token);
   return response;
 });
 
 export const getAllStocksAction = createAsyncThunk('metrics/getAllStocks', async (_, { getState }) => {
-  const token = getState().auth.token;
+  const token = getState().auth.user.token;
   const response = await getAllStocks(token);
   return response;
 });
@@ -49,7 +49,7 @@ export const getAllStocksAction = createAsyncThunk('metrics/getAllStocks', async
 export const getStockBySymbolAction = createAsyncThunk(
   'metrics/getStockBySymbol',
   async (symbol, { getState }) => {
-    const token = getState().auth.token;
+    const token = getState().auth.user.token;
     const response = await getStockBySymbol(symbol, token);
     return response;
   }

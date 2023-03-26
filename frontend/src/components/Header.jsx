@@ -30,7 +30,7 @@ function Header() {
             </button>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/eightpillars'>8-Pillar Analysis</Link></li>
-            <li><Link to='/'>Watchlist</Link></li>
+            <li><Link to='/watchlist'>Watchlist</Link></li>
             <li><Link to='/'>News Feed</Link></li>
           </li>
         ) : (

@@ -5,7 +5,7 @@ import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import Home from './pages/Home.jsx'
 import StockMetrics from './pages/StockMetrics.jsx'
-import Test from './pages/Test.jsx';
+import Watchlist from './pages/Watchlist.jsx';
 
 // Import Components
 import Header from './components/Header.jsx';
@@ -25,6 +25,7 @@ function App() {
             <Route path='/eightpillars' element={<StockMetrics />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/watchlist' element={<Watchlist />} />
 
 
 
