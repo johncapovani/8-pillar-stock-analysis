@@ -22,6 +22,7 @@
   color: #fff;
   background-color: rgba(0, 0, 0, 0.9); /* added opacity value */
   padding: 1rem;
+  height: auto;
 
 }
 
@@ -49,7 +50,7 @@
 
 @media (max-width: 768px) {
   .banner-image {
-    height: 300px;
+    height: 40VH;
     margin-top: 50px;
   }
 
