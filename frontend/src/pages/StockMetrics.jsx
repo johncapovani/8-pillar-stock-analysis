@@ -44,16 +44,16 @@ const StockMetrics = () => {
   };
 
   return (
-    <div className='Stock-Metrics'>
+    <div className="stock-metrics">
       <h1>{getStockName()}</h1>
       <form onSubmit={handleSubmit}>
         <input
-          type='text'
-          placeholder='Enter stock symbol'
+          type="text"
+          placeholder="Enter stock symbol"
           value={symbol}
           onChange={(e) => setSymbol(e.target.value)}
         />
-        <button type='submit'>Get Metrics</button>
+        <button type="submit">Get Metrics</button>
       </form>
       {metrics && (
         <div className="stock-metrics-container">
@@ -76,45 +76,62 @@ const StockMetrics = () => {
             </div>
           </div>
           <div className="metrics-list">
+            <div className="legend-section">
+              <h3 className='pillarheading'>8 Pillar Analysis Results:</h3>
+            <div className="legend">
+              <div className="legend-item">
+                <div className="legend-excellent"></div>
+                <p>Excellent</p>
+              </div>
+              <div className="legend-item">
+                <div className="legend-good"></div>
+                <p>Good</p>
+              </div>
+              <div className="legend-item">
+                <div className="legend-bad"></div>
+                <p>Bad</p>
+              </div>
+              </div>
+            </div>
             <div className="metric-item">
               <h3>EPS</h3>
-              <p className={getHighlightClass(metrics.earningsPerShare.grade)}>
+              <p className={`metric-grade ${getHighlightClass(metrics.earningsPerShare.grade)}`}>
                 {getMetricText(metrics.earningsPerShare.value, metrics.earningsPerShare.grade)}
               </p>
             </div>
             <div className="metric-item">
               <h3>ROE</h3>
-              <p className={getHighlightClass(metrics.returnOnEquity.grade)}>
+              <p className={`metric-grade ${getHighlightClass(metrics.returnOnEquity.grade)}`}>
                 {getMetricText(metrics.returnOnEquity.value, metrics.returnOnEquity.grade)}
               </p>
             </div>
             <div className="metric-item">
               <h3>Net Profit Margin</h3>
-              <p className={getHighlightClass(metrics.netProfitMargin.grade)}>
+              <p className={`metric-grade ${getHighlightClass(metrics.netProfitMargin.grade)}`}>
                 {getMetricText(metrics.netProfitMargin.value, metrics.netProfitMargin.grade)}
               </p>
             </div>
             <div className="metric-item">
               <h3>Dividend Yield</h3>
-              <p className={getHighlightClass(metrics.dividendYield.grade)}>
+              <p className={`metric-grade ${getHighlightClass(metrics.dividendYield.grade)}`}>
                 {getMetricText(metrics.dividendYield.value, metrics.dividendYield.grade)}
               </p>
             </div>
             <div className="metric-item">
               <h3>Debt to Equity Ratio</h3>
-              <p className={getHighlightClass(metrics.debtToEquityRatio.grade)}>
+              <p className={`metric-grade ${getHighlightClass(metrics.debtToEquityRatio.grade)}`}>
                 {getMetricText(metrics.debtToEquityRatio.value, metrics.debtToEquityRatio.grade)}
               </p>
             </div>
             <div className="metric-item">
               <h3>Current Ratio</h3>
-              <p className={getHighlightClass(metrics.currentRatio.grade)}>
+              <p className={`metric-grade ${getHighlightClass(metrics.currentRatio.grade)}`}>
                 {getMetricText(metrics.currentRatio.value, metrics.currentRatio.grade)}
               </p>
             </div>
             <div className="metric-item">
               <h3>Price to Book Ratio</h3>
-              <p className={getHighlightClass(metrics.priceToBookRatio.grade)}>
+              <p className={`metric-grade ${getHighlightClass(metrics.priceToBookRatio.grade)}`}>
                 {getMetricText(metrics.priceToBookRatio.value, metrics.priceToBookRatio.grade)}
               </p>
             </div>

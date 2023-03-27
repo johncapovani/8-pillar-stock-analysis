@@ -1,70 +1,174 @@
-.Stock-Metrics {
+/* Main styles for the stock metrics page */
+.stock-metrics {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top: 100px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Form styles */
+.stock-metrics form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 30px;
+}
+
+.stock-metrics input[type="text"] {
+  flex-grow: 1;
   padding: 10px;
-  padding-top: 100px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  background-color: #e6e6e6;
+  color: #333;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.stock-metrics button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
+.stock-metrics button[type="submit"]:hover {
+  background-color: #555;
+}
 
+/* Stock summary styles */
 .stock-summary {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stock-summary-item {
-  width: 100%;
-  max-width: 200px;
+  flex-grow: 1;
   margin: 10px;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  background-color: #f7f7f7;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease-in-out;
 }
 
-.stock-summary-item:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-p {
-  font-size: 18px;
+.stock-summary h2 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
+.stock-summary p {
+  font-size: 16px;
+}
+
+.stock-summary h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Metrics list styles */
+.metrics-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.metric-item {
+  flex-grow: 1;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.metric-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.metric-item p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.metric-grade {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styles for different metric grades */
 .highlight-excellent {
-  color: green;
+  color: #34c759;
 }
 
 .highlight-good {
-  color: orange;
+  color: #5ac8fa;
 }
 
 .highlight-bad {
-  color: red;
+  color: #ff3b30;
 }
 
-@media (min-width: 768px) {
-  .Stock-Metrics {
-    padding-top: 50px;
-  }
-  
-  .stock-summary {
-    flex-wrap: nowrap;
-    margin-bottom: 50px;
-  }
+.legend-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
 
-  .stock-summary-item {
-    margin: 0 20px;
-    max-width: none;
-  }
+.pillarheading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-item p {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.legend-excellent {
+  width: 20px;
+  height: 20px;
+  background-color: #34c759;
+  border-radius: 50%;
+}
+
+.legend-good {
+  width: 20px;
+  height: 20px;
+  background-color: #5ac8fa;
+  border-radius: 50%;
+}
+
+.legend-bad {
+  width: 20px;
+  height: 20px;
+  background-color: #ff3b30;
+  border-radius: 50%;
 }

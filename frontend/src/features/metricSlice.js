@@ -21,7 +21,10 @@ export const fetchMetrics = createAsyncThunk('metrics/fetchMetrics', async (symb
 
 export const addStockAction = createAsyncThunk('metrics/addStock', async (stock, { getState }) => {
   const token = getState().auth.user.token;
+  console.log(token)
+  console.log(stock)
   const response = await addStock(stock, token);
+
   return response;
 });
 

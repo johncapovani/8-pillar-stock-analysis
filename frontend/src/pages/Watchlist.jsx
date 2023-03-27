@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllStocksAction, addStockAction } from '../features/metricSlice';
 import '../pages_css/Watchlist.css'
+
 const Watchlist = () => {
   const dispatch = useDispatch();
   const [symbol, setSymbol] = useState('');
+  const [name, setName] = useState('');
   const [sector, setSector] = useState('');
-  const stocks = useSelector((state) => state.metrics);
+  const stocks = useSelector((state) => state.metric.metrics);
 
   useEffect(() => {
     dispatch(getAllStocksAction());
@@ -14,27 +16,39 @@ const Watchlist = () => {
 
   const handleAddStock = (event) => {
     event.preventDefault();
-    dispatch(addStockAction({ symbol, sector }));
+    dispatch(addStockAction({ symbol, name, sector }));
     setSymbol('');
+    setName('');
     setSector('');
   };
 
   return (
     <div className="watchlist-container">
-      <h1>My Watchlist</h1>
-      <form onSubmit={handleAddStock}>
-        <div className="form-group">
+      <h1>Add a stock to your watchlist:</h1>
+      <form className="watchlist-form" onSubmit={handleAddStock}>
+        <div className="watchlist-form-group">
           <label htmlFor="symbol">Symbol:</label>
           <input
+            className="watchlist-form-input"
             type="text"
             id="symbol"
             value={symbol}
             onChange={(e) => setSymbol(e.target.value)}
           />
         </div>
-        <div className="form-group">
+        <div className="watchlist-form-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            className="watchlist-form-input"
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="watchlist-form-group">
           <label htmlFor="sector">Sector:</label>
-          <select id="sector" value={sector} onChange={(e) => setSector(e.target.value)}>
+          <select className="watchlist-form-select" id="sector" value={sector} onChange={(e) => setSector(e.target.value)}>
             <option value="">Select a sector</option>
             <option value="Technology">Technology</option>
             <option value="Healthcare">Healthcare</option>
@@ -46,8 +60,9 @@ const Watchlist = () => {
             <option value="Materials">Materials</option>
           </select>
         </div>
-        <button type="submit">Add Stock</button>
+        <button className="watchlist-form-button" type="submit">Add Stock</button>
       </form>
+      <h2>My Watchlist</h2>
       <div className="stock-list">
         {stocks &&
           stocks.map((stock) => (
@@ -61,5 +76,6 @@ const Watchlist = () => {
     </div>
   );
 };
+
 
 export default Watchlist;
