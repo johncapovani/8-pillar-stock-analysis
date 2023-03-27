@@ -10,8 +10,7 @@ export const getAllStocks = async (token) => {
     },
   };
 
-  const response = await axios.get(`http://localhost:5000/api/stocks`, config);
-  console.log(response)
+  const response = await axios.get(`${API_URL}/stocks`, config);
   return response.data;
 };
 

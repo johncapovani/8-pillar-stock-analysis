@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getAllStocksAction, addStockAction } from '../features/metricSlice';
 import '../pages_css/Watchlist.css'
 
@@ -66,16 +67,17 @@ const Watchlist = () => {
       <div className="stock-list">
         {stocks &&
           stocks.map((stock) => (
-            <div className="stock-item" key={stock._id}>
-              <p className="stock-symbol">Symbol: {stock.symbol}</p>
-              <p className="stock-name">Name: {stock.name}</p>
-              <p className="stock-sector">Sector: {stock.sector}</p>
-            </div>
+            <Link to={`/eightpillars/${stock.symbol}`} key={stock._id}>
+              <div className="stock-item">
+                <p className="stock-symbol">Symbol: {stock.symbol}</p>
+                <p className="stock-name">Name: {stock.name}</p>
+                <p className="stock-sector">Sector: {stock.sector}</p>
+              </div>
+            </Link>
           ))}
       </div>
     </div>
   );
 };
-
 
 export default Watchlist;
