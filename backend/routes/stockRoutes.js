@@ -13,6 +13,7 @@ const {
   deleteStockBySymbol,
   getStockMetrics,
   getStockTargetPrice,
+  getNewsArticlesForAllStocks
 } = require('../controllers/stockController');
 
 // Get all stocks
@@ -36,5 +37,8 @@ router.get('/:symbol/metrics', protect, getStockMetrics);
 // Calculate target price for a stock by symbol
 //Not a priority 
 router.get('/:symbol/target-price', protect, getStockTargetPrice);
+
+//Get News Articles
+router.get('/news', protect, getNewsArticlesForAllStocks);
 
 module.exports = router;

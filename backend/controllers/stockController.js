@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler');
 const Stock = require('../models/stockModel');
 const { calculateMetrics } = require('./scripts/stockMetricCall');
+const { getNewsArticlesForAllStocks } = require('./scripts/stockNewsCall');
 
 // @desc Get all stocks
 // @route GET /api/stocks
@@ -92,4 +93,12 @@ exports.getStockTargetPrice = asyncHandler(async (req, res) => {
   // Fetch the stock data and calculate the target price
   // ...
   res.json({ targetPrice });
+});
+
+// @desc Get news articles for all user's stocks
+// @route GET /api/stocks/news
+// @access Private
+exports.getNewsArticlesForAllStocks = asyncHandler(async (req, res) => {
+  const newsArticles = await getNewsArticlesForAllStocks(req.user._id);
+  res.json(newsArticles);
 });
