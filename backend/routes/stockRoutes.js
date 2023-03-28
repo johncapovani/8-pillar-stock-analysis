@@ -13,7 +13,7 @@ const {
   deleteStockBySymbol,
   getStockMetrics,
   getStockTargetPrice,
-  getNewsArticlesForAllStocks
+  getStockNews
 } = require('../controllers/stockController');
 
 // Get all stocks
@@ -39,6 +39,6 @@ router.get('/:symbol/metrics', protect, getStockMetrics);
 router.get('/:symbol/target-price', protect, getStockTargetPrice);
 
 //Get News Articles
-router.get('/news', protect, getNewsArticlesForAllStocks);
+router.get('/news', protect, getStockNews);
 
 module.exports = router;

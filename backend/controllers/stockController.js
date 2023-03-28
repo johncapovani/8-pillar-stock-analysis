@@ -98,7 +98,8 @@ exports.getStockTargetPrice = asyncHandler(async (req, res) => {
 // @desc Get news articles for all user's stocks
 // @route GET /api/stocks/news
 // @access Private
-exports.getNewsArticlesForAllStocks = asyncHandler(async (req, res) => {
+exports.getStockNews = asyncHandler(async (req, res) => {
+  console.log('Triggered')
   const newsArticles = await getNewsArticlesForAllStocks(req.user._id);
   res.json(newsArticles);
 });

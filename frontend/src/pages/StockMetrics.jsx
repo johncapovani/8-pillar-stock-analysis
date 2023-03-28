@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getMetricsBySymbol } from '../features/metricService';
 import '../pages_css/StockMetrics.css';
+import PillarDescriptions from '../components/PillarDescriptions'
 
 const StockMetrics = () => {
   const [symbol, setSymbol] = useState('');
@@ -138,7 +139,9 @@ const StockMetrics = () => {
           </div>
         </div>
       )}
+      <PillarDescriptions />
     </div>
+    
   );
 };
 
