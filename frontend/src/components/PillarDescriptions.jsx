@@ -26,7 +26,20 @@ const PillarDescriptions = () => {
       <h3 className="pillar-heading">Price to Book Ratio</h3>
       <p className="pillar-description">Price to book ratio compares a company's market value (share price) to its book value (assets minus liabilities). A low price to book ratio is generally desirable, as it indicates that a company's stock is undervalued compared to its book value.</p>
 
-      
+      <div className="reference-section">
+        <h2 className="reference-heading">References:</h2>
+        <ul className="reference-list">
+          <li className="reference-item"><a href="https://www.investopedia.com/terms/e/eps.asp" target="_blank" rel="noopener noreferrer">Investopedia. (n.d.). Earnings Per Share (EPS).</a></li>
+          <li className="reference-item"><a href="https://www.investopedia.com/terms/r/returnonequity.asp" target="_blank" rel="noopener noreferrer">Investopedia. (n.d.). Return On Equity - ROE.</a></li>
+          <li className="reference-item"><a href="https://www.investopedia.com/terms/n/netprofitmargin.asp" target="_blank" rel="noopener noreferrer">Investopedia. (n.d.). Net Profit Margin.</a></li>
+          <li className="reference-item"><a href="https://www.investopedia.com/terms/d/dividendyield.asp" target="_blank" rel="noopener noreferrer">Investopedia. (n.d.). Dividend Yield.</a></li>
+          <li className="reference-item"><a href="https://www.investopedia.com/terms/d/debtequityratio.asp" target="_blank" rel="noopener noreferrer">Investopedia. (n.d.). Debt-To-Equity Ratio - D/E Ratio.</a></li>
+          <li className="reference-item"><a href="https://www.investopedia.com/terms/c/currentratio.asp" target="_blank" rel="noopener noreferrer">Investopedia. (n.d.). Current Ratio.</a></li>
+          <li className="reference-item"><a href="https://www.investopedia.com/terms/p/price-to-bookratio.asp" target="_blank" rel="noopener noreferrer">Investopedia. (n.d.). Price-To-Book Ratio - P/B Ratio.</a></li>
+        </ul>
+      </div>
+
+
     </div>
   );
 };
