@@ -13,6 +13,7 @@ const StockMetrics = () => {
     e.preventDefault();
     try {
       const data = await getMetricsBySymbol(symbol, token);
+      console.log(data)
       setMetrics(data);
     } catch (error) {
       console.log(error);
@@ -64,8 +65,12 @@ const StockMetrics = () => {
               <p>{metrics.info.Description}</p>
             </div>
             <div className="stock-summary-item">
+              <h3>Target Price by Analyst</h3>
+              <p>{metrics.info.AnalystTargetPrice}</p>
+            </div>
+            <div className="stock-summary-item">
               <h3>Market Cap</h3>
-              <p>{metrics.info.MarketCapitalization}</p>
+              <p>{metrics.info.MarketCapitalization.toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
             </div>
             <div className="stock-summary-item">
               <h3>P/E Ratio</h3>
@@ -74,6 +79,30 @@ const StockMetrics = () => {
             <div className="stock-summary-item">
               <h3>P/S Ratio</h3>
               <p>{metrics.info.PriceToSalesRatioTTM}</p>
+            </div>
+            <div className="stock-summary-item">
+              <h3>52 Week High</h3>
+              <p>{metrics.info["52WeekHigh"]}</p>
+            </div>
+            <div className="stock-summary-item">
+              <h3>52 Week Low</h3>
+              <p>{metrics.info["52WeekLow"]}</p>
+            </div>
+            <div className="stock-summary-item">
+              <h3>200 Day Moving Average</h3>
+              <p>{metrics.info["200DayMovingAverage"]}</p>
+            </div>
+            <div className="stock-summary-item">
+              <h3>50 Day Moving Average</h3>
+              <p>{metrics.info["50DayMovingAverage"]}</p>
+            </div>
+            <div className="stock-summary-item">
+              <h3>Book Value</h3>
+              <p>{metrics.info.BookValue}</p>
+            </div>
+            <div className="stock-summary-item">
+              <h3>Beta</h3>
+              <p>{metrics.info.Beta}</p>
             </div>
           </div>
           <div className="metrics-list">
