@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+8 Pillar Stock Analysis App
+This is a web application that analyzes stocks based on the 8 pillars of stock analysis. Users can search for a stock by symbol and view important metrics, grades, and charts for each of the 8 pillars.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tech Stack
+The app is built with the following tech stack:
 
-## Available Scripts
+React
+Node.js
+Express
+MongoDB
+JWT/Bcrypt for Authentication
+Redux for state managment
 
-In the project directory, you can run:
+Installation
+To run the app locally, follow these steps:
 
-### `npm start`
+Clone the repository: git clone https://github.com/johncapovani/8-pillar-stock-analysis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Navigate to the project directory: cd 8-pillar-stock-analysis-app
+Install the dependencies: npm install
+Start the server: npm start
+Open the app in your browser at http://localhost:3000
+Usage
+To use the app, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On the eight pillar analysis screen enter a stock symbol in the search bar and click "Search".
+View the metrics, grades, and charts for each of the 8 pillars of stock analysis.
+Analyze the data to make informed investment decisions.
 
-### `npm test`
+Users can add tickers to the watchlist screen as well. Simply enter the stocks name, symbol, and  industry and submit.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Resources
+Here are some resources that were helpful in building this app:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Investopedia: 8 Pillars of Financial Success
+Alpha Vantage API
+Chart.js documentation
+Investopedia. (n.d.). Fundamental Analysis. https://www.investopedia.com/terms/f/fundamentalanalysis.asp
+Investopedia. (n.d.). Technical Analysis. https://www.investopedia.com/terms/t/technicalanalysis.asp
+Morningstar. (n.d.). Analyst Research. https://www.morningstar.com/investing/analyst-research
+Koyfin. (n.d.). Koyfin | Advanced graphing and analytical tools for investors. https://www.koyfin.com/
+Yahoo Finance. (n.d.). Yahoo Finance - Stock Market Live, Quotes, Business & Finance News. https://finance.yahoo.com/
+Seeking Alpha. (n.d.). Stock Market Insights | Seeking Alpha. https://seekingalpha.com/
+The Balance. (n.d.). How to Analyze a Stock. https://www.thebalance.com/how-to-analyze-stocks-357224
+MarketWatch. (n.d.). MarketWatch: Stock Market News - Financial News - MarketWatch. https://www.marketwatch.com/
+Benzinga. (n.d.). Stock Market Quotes, Business News, Financial News, Trading Ideas, and Stock Research by Professionals. https://www.benzinga.com/
+Zacks Investment Research. (n.d.). Zacks Investment Research: Stock Research, Analysis, & Recommendations. https://www.zacks.com/
