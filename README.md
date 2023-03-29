@@ -52,9 +52,16 @@ However, there is a lot of room for scalability:
 ## What we learned
 
 ## Citations and Resources
+- Used Traversy Media Controller, Routes, Redux Slice structure for the backend https://github.com/bradtraversy/mern-tutorial
+- Referenced code from personal projects and reused it to prevent having to recreate it all again. Such as styling, header, login page, register page, and other react components
 - Referenced Traversy Media for JWTToken, Protected Routes, etc.
 - Traversy Media https://www.youtube.com/watch?v=-0exw-9YJBo&t=821s
 - Investopedia. "8 Pillars of Financial Success". https://www.investopedia.com/terms/e/eight-pillars-financial-prosperity.asp
+- Morningstar. (n.d.). Analyst Research. https://www.morningstar.com/investing/analyst-research
+- Koyfin. (n.d.). Koyfin | Advanced graphing and analytical tools for investors. https://www.koyfin.com/
+- Yahoo Finance. (n.d.). Yahoo Finance - Stock Market Live, Quotes, Business & Finance News. https://finance.yahoo.com/
+- Seeking Alpha. (n.d.). Stock Market Insights | Seeking Alpha. https://seekingalpha.com/
+- The Balance. (n.d.). How to Analyze a Stock. https://www.thebalance.com/how-to-analyze-stocks-357224
 - Alpha Vantage. "API Documentation". https://www.alphavantage.co/documentation/
 - Chart.js. "Documentation". https://www.chartjs.org/docs/latest/
 - MongoDB. "Documentation". https://docs.mongodb.com/
