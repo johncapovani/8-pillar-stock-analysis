@@ -6,6 +6,10 @@ John Capovani (johncapovani)
 # Deployed using Render
 - Front End: https://tikerwatch-eightpillars.onrender.com/
 - Back End: https://tikerwatch.onrender.com/ 
+Front End Deployed Repository: 
+https://github.com/johncapovani/tikerwatch-frontend-deployment
+Back End Deployed Repository: 
+https://github.com/johncapovani/tikerwatch-backend-deployment
 ## Overview
 With TikerWatch, users can not only search for any ticker and get the 8 pillar metrics for fundamental analysis, but they can also add tickers to their watchlist for easy tracking. This allows users to stay on top of their investments and quickly see any changes in the stock's performance.
 
