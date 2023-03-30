@@ -3,6 +3,9 @@
 ## Contributors
 John Capovani (johncapovani)
 
+# Deployed using Render
+- Front End: https://tikerwatch-eightpillars.onrender.com/
+- Back End: https://tikerwatch.onrender.com/ 
 ## Overview
 With TikerWatch, users can not only search for any ticker and get the 8 pillar metrics for fundamental analysis, but they can also add tickers to their watchlist for easy tracking. This allows users to stay on top of their investments and quickly see any changes in the stock's performance.
 
@@ -48,6 +51,62 @@ However, there is a lot of room for scalability:
 - View relevant news for followed stocks
 - Options Trade Suggestions
 - Notify users when stocks are trending to alert investors to potential winners
+
+# 8 Pillars
+- Stock Market Cap to Sales or Price-to-Sales ratio: This metric measures a company's market capitalization relative to its revenue. A low ratio is generally considered favorable, indicating that a company's stock price is low relative to its revenue and may be undervalued. A high ratio may indicate that the stock is overvalued.
+- Earnings Per Share (EPS): This metric represents the amount of profit a company generates per share of its outstanding stock. A higher EPS is generally considered better, as it indicates that the company is more profitable on a per-share basis.
+- Return on Equity (ROE): This metric measures how effectively a company is using its shareholders' equity to generate profits. A higher ROE is generally considered better, as it indicates that the company is generating more profits with each dollar of shareholder equity.
+- Net Profit Margin: This metric measures the percentage of revenue that a company retains as profit after accounting for all expenses. A higher net profit margin is generally considered better, as it indicates that the company can generate more profits from its revenue.
+- Dividend Yield: This metric measures the percentage of a company's stock price that is paid out as dividends each year. A higher dividend yield is generally considered better, as it indicates that investors can expect a higher return on their investment.
+- Debt-to-Equity ratio: This metric compares a company's total debt to its shareholder equity, indicating how much debt the company is using to finance its operations. A lower ratio is generally considered better, as it indicates that the company is relying less on debt to fund its operations.
+- Current ratio: This metric measures a company's ability to pay off its short-term liabilities with its short-term assets. A higher current ratio is generally considered better, as it indicates that the company has more assets available to pay off its debts in the short term.
+- Price-to-Book ratio: This metric compares a company's market capitalization to its book value, which represents the value of its assets minus its liabilities. A lower ratio is generally considered better, as it indicates that the company's stock price is lower relative to its book value and may be undervalued. The 8 pillar stock analysis is a method of evaluating the overall health and potential of a publicly traded company by assessing eight different factors or "pillars" of its business. 
+
+# The eight pillars are:
+1.	Price-to-Sales ratio
+2.	Earnings Per Share
+3.	Return on Equity
+4.	Net Profit Margin
+5.	Dividend Yield
+6.	Debt-to-Equity ratio
+7.	Current ratio
+8.	Price-to-Book ratio
+
+# Grading Scale:
+Price-to-Sales ratio:
+Bad: Above 5
+Good: Below 5
+Excellent: Below 1
+Earnings Per Share:
+Bad: Negative
+Good: Positive
+Excellent: Positive and growing
+Return on Equity:
+Bad: Below 10%
+Good: Between 10% and 20%
+Excellent: Above 20%
+Net Profit Margin:
+Bad: Below 10%
+Good: Between 10% and 20%
+Excellent: Above 20%
+Dividend Yield:
+Bad: Below 1%
+Good: Between 1% and 3%
+Excellent: Above 3%
+Debt-to-Equity ratio:
+Bad: Above 2
+Good: Between 1 and 2
+Excellent: Below 1
+Current ratio:
+Bad: Below 1
+Good: Above 1
+Excellent: Above 2
+Price-to-Book ratio:
+Bad: Above 4
+Good: Between 1 and 4
+Excellent: Below 1
+The 8-pillar stock analysis calculation involves gathering and analyzing financial data for each of these pillars to assess the overall strength and potential of a company. The analysis can be done manually or using financial software tools, and it is often used by investors and traders to make investment decisions based on a company's financial health and potential.
+
 
 ## What we learned
 
